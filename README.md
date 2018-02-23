@@ -1,31 +1,32 @@
-Role Name [![Build Status](https://travis-ci.org/avu0ng/uclalib_role_syslogng.svg?branch=master)](https://travis-ci.org/avu0ng/uclalib_role_syslogng)
+UCLALIB Syslog-ng Role[![Build Status](https://travis-ci.org/avu0ng/uclalib_role_syslogng.svg?branch=master)](https://travis-ci.org/avu0ng/uclalib_role_syslogng)
 =========
 
-A brief description of the role goes here.
+This role will configured RHEL7/RHEL6 & CentOS7/CentOS6 systems by installing the EPEL repo and syslog-ng package.
 
 Requirements
 ------------
-
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Only requirement for syslog-ng is that it needs to be downloaded from EPEL. Syslog-ng is *not* directly supported by RedHat. This role will handle installing the EPEL repo.
 
 Role Variables
 --------------
+If you want a default set up, you do *not* need to specify any variables.
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+If you want to set up remote logging, override the following variables for UDP ports and IP address of the remote syslog server:
+
+    - hosts: all
+      remote_server: 172.16.12.25
+      udp_port: 514
+      roles:
+         - { role: uclalib_role_syslogng }
+
 
 Dependencies
 ------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None
 
 Example Playbook
 ----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+View tests/test.yml for an example of how to run this playbook
 
 License
 -------
@@ -34,5 +35,4 @@ BSD 3-Clause
 
 Author Information
 ------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Developed by UCLA Library DIIT - Development Support(Anthony Vuong)
