@@ -1,0 +1,4 @@
+---
+udp_port: 514
+remote_server: 172.0.0.1
+syslogng_conf_path: /etc/syslog-ng/syslog-ng.conf
