@@ -1,4 +1,4 @@
-UCLALIB Syslog-ng Role[![Build Status](https://travis-ci.org/avu0ng/uclalib_role_syslogng.svg?branch=master)](https://travis-ci.org/avu0ng/uclalib_role_syslogng)
+UCLALIB Syslog-ng Role [![Build Status](https://travis-ci.org/avu0ng/uclalib_role_syslogng.svg?branch=master)](https://travis-ci.org/avu0ng/uclalib_role_syslogng)
 =========
 
 This role will configured RHEL7/RHEL6 & CentOS7/CentOS6 systems by installing the EPEL repo and syslog-ng package.
@@ -35,4 +35,4 @@ BSD 3-Clause
 
 Author Information
 ------------------
-Developed by UCLA Library DIIT - Development Support(Anthony Vuong)
+Developed and maintained by UCLA Library DIIT - Development Support(Anthony Vuong)
