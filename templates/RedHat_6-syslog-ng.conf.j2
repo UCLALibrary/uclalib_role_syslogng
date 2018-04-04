@@ -51,8 +51,4 @@ log { source(s_sys); filter(f_news); destination(d_spol); destination(remote_sys
 log { source(s_sys); filter(f_boot); destination(d_boot); destination(remote_syslog);};
 log { source(s_sys); filter(f_cron); destination(d_cron); destination(remote_syslog);};
 
-
-# Source additional configuration files (.conf extension only)
-@include "/etc/syslog-ng/conf.d/*.conf"
-
 # vim:ft=syslog-ng:ai:si:ts=4:sw=4:et:
