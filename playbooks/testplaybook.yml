@@ -1,5 +1,7 @@
+---
 - hosts: all
-  remote_server: 10.0.0.5
-  udp_port: 514
+  vars:
+    remote_server: 10.0.0.5
+    udp_port: 514
   roles:
      - { role: uclalib_role_syslogng }
