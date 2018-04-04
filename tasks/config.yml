@@ -1,0 +1,10 @@
+---
+- name: Configure syslog-ng conf file
+  template:
+    src: syslog-ng.conf.j2
+    dest: "{{ syslogng_conf_path }}"
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - Restart syslog-ng

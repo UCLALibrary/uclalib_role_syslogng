@@ -1,0 +1,16 @@
+---
+
+- name: Ensure EPEL repo is installed
+  package:
+    name: "{{ epel_url }}"
+    state: present
+
+- name: Install syslog-ng
+  package:
+    name: "{{ syslogng_pkg }}"
+    state: present
+
+- name: Start syslog-ng at runtime
+  service:
+    name: syslog-ng
+    enabled: yes
