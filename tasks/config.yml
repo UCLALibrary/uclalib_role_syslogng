@@ -1,7 +1,7 @@
 ---
 - name: Configure syslog-ng conf file
   template:
-    src: syslog-ng.conf.j2
+    src: "{{ ansible_os_family }}_{{ ansible_distribution_major_version }}-syslog-ng.conf.j2"
     dest: "{{ syslogng_conf_path }}"
     owner: root
     group: root
